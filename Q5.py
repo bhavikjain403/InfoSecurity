@@ -1,7 +1,6 @@
 s = input("Enter plain text : ")
 n = len(s)
-k = input("Enter the key : ")
-lk=len(k)
+k = int(input("Enter the shift (key) : "))
 
 # Replacing space with "_"
 s=list(s)
@@ -33,8 +32,8 @@ for group in groups:
 # Circular shift by len(key) bits
 for i in range(len(ans)):
     rev=ans[i][::-1]
-    a=rev[:lk]
-    b=rev[lk:]
+    a=rev[:k]
+    b=rev[k:]
     ans[i]=a[::-1]+b[::-1]
 
 print("Encrypted binary string is :","".join(ans))
