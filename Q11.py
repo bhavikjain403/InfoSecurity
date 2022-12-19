@@ -1,0 +1,1 @@
+print("Thoda apna dimaag bhi chalao !!!")
