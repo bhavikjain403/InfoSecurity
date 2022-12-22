@@ -3,7 +3,8 @@ def createTable(key):
     for i in key:
         if i not in k:
             if i=="J":
-                k.append("I")
+                if "I" not in k:
+                    k.append("I")
             else:
                 k.append(i)
     for i in range(65,91):
@@ -34,13 +35,15 @@ def group2(s):
             i+=1
     if i==l-1:
         if s[i]=="X":
-                t="Y"
+            t="Y"
         else:
             t="X"
         group.append(s[i]+t)
     return group
 
 def search(table,e):
+    if e=="J":
+        e="I"
     for i in range(5):
         for j in range(5):
             if table[i][j]==e:
